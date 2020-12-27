@@ -1,0 +1,52 @@
+//библиотеки
+@import "import/_libs.scss";
+// @import "import/_custom-animate.scss";
+//<==ОБНУЛЕНИЕ======
+@import "import/_null.scss";
+//<Подключаем шрифты>=======================================================================================
+@import "import/_fonts.scss";
+@import "import/_global_style.scss";
+//===========================================================================
+body {
+	font-family: 'Quicksand', sans-serif;
+	color: #000;
+	&.lock {
+		overflow-x: hidden;
+	}
+}
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	transition-duration: 1s;
+	&.displacement {
+		margin-right: 0;
+		margin-left: -260px;
+		transition-duration: 1s;
+		overflow: visible;
+		@media (max-width: 319px) {
+			margin-left: -230px;
+		};
+	}
+}
+.content {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+//</ОБОЛОЧКА>===========================================================================================================
+.container {
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+	width: 100%;
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+@import "pages/_content.scss";
+
+

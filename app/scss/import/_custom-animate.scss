@@ -1,0 +1,24 @@
+ 
+//animation for MagicScroll
+.team {
+	opacity: 0;
+	transition-duration: 1.5s;
+	transform: translateX(-100px);
+	&.fade-left {
+		opacity: 1;
+		transition-duration: 1.5s;
+		transform: translateX(0);
+	}
+}
+ 
+.mark {
+	opacity: 0;
+	transition-duration: 1.5s;
+	transform: translateX(100px);
+	&.fade-right {
+		opacity: 1;
+		transition-duration: 1.5s;
+		transform: translateX(0);
+	}
+}
+

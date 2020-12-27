@@ -1,0 +1,67 @@
+
+//перед использованием своих классов необходимо задать базовые свойства
+.weekly__slider-container {
+	overflow: hidden;
+	width: 100%;
+	outline: 1px solid red;
+}
+.weekly__slider-wrapper {
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+.weekly__slider-item {
+	flex-shrink: 0;
+	max-height: 450px;
+}
+////////////////////////////////////////////////////////////////////////
+
+.weekly__title-box {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 30px;
+}
+
+.weekly__slider-buttons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.swiper-button-prev, 
+.swiper-button-next {
+	 position: static;
+	 background-color: #7347c1;
+	 width: 55px;
+	 height: 45px;
+	 border: none;
+	 margin: 0;
+	 padding: 0;
+	 &:after {
+	 	position: absolute;
+	 	font-size: 0;
+	 	content: "";
+	 	width: 8px;
+	 	height: 18px;
+	 	background-repeat: no-repeat;
+	 	background-position: center;
+	 }
+}
+
+.swiper-button-prev {
+	border-top-left-radius: 23px;
+	border-bottom-left-radius: 23px;
+}
+
+.swiper-button-next {
+	border-top-right-radius: 23px;
+	border-bottom-right-radius: 23px;
+}
+
+.swiper-button-prev:after {
+	background-image: url('');
+}
+.swiper-button-next:after {
+	background-image: url('');
+}
