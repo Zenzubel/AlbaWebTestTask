@@ -1446,6 +1446,7 @@ body.lock {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  padding: 0 66px;
   height: 99px;
 }
 
@@ -1463,8 +1464,37 @@ body.lock {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  font-family: Inter;
+  font-style: normal;
+  font-size: 18px;
   width: 150px;
-  text-align: center;
+}
+
+.parametrs__sistem {
+  font-weight: 600;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.parametrs__sistem--title {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.parametrs__value {
+  font-weight: 300;
+  line-height: 150%;
+  color: #121925;
+}
+
+.parametrs__value--title {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 @media (max-width: 800px) {
