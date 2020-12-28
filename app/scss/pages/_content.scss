@@ -257,6 +257,9 @@
 	}
 	// .facts__picture
 	&__picture {
+		& source, img {
+			height: 100%;
+		}
 	}
 	// .facts__discription
 	&__discription {
@@ -319,3 +322,52 @@
 	}
 }
 //end facts
+// start parametrs
+.parametrs {
+	padding: 185px 0 195px;
+	// .parametrs__title
+	&__title {
+		margin-bottom: 90px;
+	}
+	// .parametrs__body
+	&__body {
+		width: 100%;
+	}
+	// .parametrs__heading
+	&__heading {
+		background: #4E535B;
+	}
+	// .parametrs__value-list
+	&__value-list {
+		border-bottom: 1px solid #D6D7D9;
+	}
+	&__heading, 
+	&__value-list {
+		display: flex;
+		justify-content: space-between;
+
+		height: 99px;
+	}
+		// .parametrs__sistem
+	&__sistem {
+
+
+	}
+	// .parametrs__value
+	&__value {
+		
+
+	}
+	&__sistem, 
+	&__value {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 150px;
+		text-align: center;
+		
+	}
+}
+
+
+// end parametrs
