@@ -8,6 +8,12 @@
 		width: 100%;
 		padding: 48px 0 10px;
 		z-index: 30;
+		transition-duration: 0.3s;
+		&.active {
+			transition-duration: 0.3s;
+			padding: 10px 0;
+			background-color: rgba(0, 0, 0, 0.7);
+		}
 	}
 	// .header__content
 	&__content {
@@ -391,7 +397,18 @@
 	}
 	// .more__container
 	&__container {
+		position: relative;
 		width: 100%;
+		&:before {
+			position:absolute;
+			content: "";
+			top:0;
+			right: 100%;
+			height: 100%;
+			width: 100%;
+			background-color: #fff;
+			z-index: 10;
+		}
 	}
 	// .more__wrapper
 	&__wrapper {
@@ -442,8 +459,8 @@
 	background: #121925;
 	// .contacts__body
 	&__body {
-		padding: 200px 0;
-
+		padding-top: 200px;
+		display: flex;
 	}
 	// .contacts__info
 	&__info {
@@ -498,6 +515,9 @@
 	}
 	// .contacts__map
 	&__map {
+		width: 100%;
+		height: 100%;
+		outline: 1px solid red;
 	}
 }
 //end contacts

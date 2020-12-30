@@ -69,14 +69,46 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
 		},
 	});
 
-///////////////start-nicescroll//////////////////////
-	$(".my-class").niceScroll({
-		cursorcolor:"#b8a47e",
-		cursorwidth:"4px",
-		background:"none",
-		cursorborder:"none",
-		cursorborderradius:4
-	});
-///////////////end-nicescroll//////////////////////
+//////////////////////start scrollMagic//////////////////////
+		// initScrollMagic
+	var controller = new ScrollMagic.Controller();
+	// start scene
+	new ScrollMagic.Scene({
+		triggerElement: "",
+		duration: '0',
+		triggerHook: 0.1,
+		offset: 40,
+		reverse: true})
+	.setClassToggle(".header__inner", "active") // add class toggle
+	.addIndicators({
+		name: 'anim scene',
+		colorTrigger: 'black',
+		colorStart: 'red',
+		colorEnd: 'green'
+	}) // add indicators (requires plugin)
+	.addTo(controller);
+	//end scene
+//////////////////////end scrollMagic//////////////////////
+
+			// function initMap(): void {
+			//   // The location of Uluru
+			//   const uluru = { lat: -25.344, lng: 131.036 };
+			//   // The map, centered at Uluru
+			//   const map = new google.maps.Map(
+			//     document.getElementById("map") as HTMLElement,
+			//     {
+			//       zoom: 4,
+			//       center: uluru,
+			//     }
+			//   );
+
+			//   // The marker, positioned at Uluru
+			//   const marker = new google.maps.Marker({
+			//     position: uluru,
+			//     map: map,
+			//   });
+			// }
+		
+
 
 });

@@ -52,7 +52,7 @@ gulp.task('css', async function(){
 // ============конкатинация и сжатие js файлов================
 //=============больше двух файлов применять кв. скобки []=======
 gulp.task ('js', function (){
-	return gulp.src(['app/js/script/swiper/swiper.js', 'app/js/script/ScrollMagic/ScrollMagic.js', 'app/js/script/ScrollMagic/custom-scroll.js'])
+	return gulp.src(['app/js/script/swiper/swiper.js', 'app/js/script/ScrollMagic/ScrollMagic.js', 'app/js/script/ScrollMagic/plugins/debug.addIndicators.js'])
 	.pipe(concat('libs.min.js'))
 	.pipe (uglify())
 	.pipe (gulp.dest('app/js'))
