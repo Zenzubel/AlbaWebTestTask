@@ -1241,7 +1241,7 @@ body.lock {
   position: absolute;
   content: "";
   top: 50%;
-  left: 50%;
+  left: 51%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -1249,6 +1249,40 @@ body.lock {
   height: 10px;
   background-size: 17px 10px;
   background-image: url("data:image/svg+xml,%3Csvg width='17' height='10' viewBox='0 0 17 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 1.42857L8.49997 10L7.0833 8.57143L15.5833 0L17 1.42857Z' fill='%23E8232E'/%3E%3Cpath d='M8.49997 10L0 1.42858L1.41667 9.01081e-06L9.9167 8.57144L8.49997 10Z' fill='%23E8232E'/%3E%3C/svg%3E%0A");
+  -webkit-animation-name: move;
+  animation-name: move;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-fill-mode: none;
+  animation-fill-mode: none;
+}
+
+@-webkit-keyframes move {
+  0% {
+    top: 45%;
+  }
+
+  100% {
+    top: 55%;
+  }
+}
+
+@keyframes move {
+  0% {
+    top: 45%;
+  }
+
+  100% {
+    top: 55%;
+  }
 }
 
 .advantages__inner {

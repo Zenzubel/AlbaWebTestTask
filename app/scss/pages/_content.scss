@@ -153,12 +153,27 @@
 			position:absolute;
 			content: "";
 			top: 50%;
-			left: 50%;
+			left: 51%;
 			transform: translate(-50%, -50%);
 			width: 17px;
 			height: 10px;
 			background-size: 17px 10px;
 			background-image: url("data:image/svg+xml,%3Csvg width='17' height='10' viewBox='0 0 17 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 1.42857L8.49997 10L7.0833 8.57143L15.5833 0L17 1.42857Z' fill='%23E8232E'/%3E%3Cpath d='M8.49997 10L0 1.42858L1.41667 9.01081e-06L9.9167 8.57144L8.49997 10Z' fill='%23E8232E'/%3E%3C/svg%3E%0A");
+			animation-name: move;
+			animation-duration: 0.8s;
+			animation-timing-function: linear;
+			animation-delay: 0s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			animation-fill-mode: none;
+			@keyframes move {
+				0% {
+					top: 45%;
+				}
+				100% {
+					top: 55%;
+				}
+			}
 		}
 	}
 }
