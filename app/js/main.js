@@ -5,15 +5,21 @@ document.addEventListener('DOMContentLoaded', () => {
 	const burgerMenu = document.querySelector('.menu-drop');
 	const burgerMenuLink = document.querySelectorAll('.menu-drop__link');
 	const body = document.querySelector('body');
+	const wrapper = document.querySelector('.wrapper');
+	const headerInner = document.querySelector('.header__inner');
 
 	burgerIcon.addEventListener('click', (event) => {
 		burgerIcon.classList.toggle('active');
 		if (burgerIcon.classList.contains('active')) {
 			body.classList.add('lock');
 			burgerMenu.classList.add('active');
+			wrapper.classList.add('displacement');
+			headerInner.classList.add('displacement');
 		} else {
 			body.classList.remove('lock');
 			burgerMenu.classList.remove('active');
+			wrapper.classList.remove('displacement');
+			headerInner.classList.remove('displacement');
 		}
 	});
 

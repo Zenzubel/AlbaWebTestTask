@@ -5,11 +5,11 @@
 		height: 20px;
 		position: relative;
 		transition-duration: 0.7s;
-		@media (max-width: 800px) {
+		@media (max-width: 991.98px) {
 			display: block;
-			position: absolute;
-			right: 15px;
-			top: 30px;
+			// position: absolute;
+			// right: 15px;
+			// top: 30px;
 		}
 		&:before {
 			top: 0;
@@ -51,7 +51,7 @@
 	left: 0;
 	height: 4px;
 	width: 30px;
-	background-color: #000;
+	background-color: #fff;
 	display: inline-block;
 }
 .menu-burger__icon.active .menu-burger__middle {
