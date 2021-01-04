@@ -61,10 +61,10 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
 		slideClass: 'more__item',
 		loop: true,
 		freeMode: false,
-		simulateTouch: false,
 		slidesPerView: 'auto',
-		centeredSlides: false,
 		spaceBetween: 20,
+		simulateTouch: false,
+		centeredSlides: false,
 		autoplay: {
 			delay: 5000,
 			disableOnInteraction: false,
@@ -73,6 +73,19 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
 			el: '.more__scroll',
 			draggable: true
 		},
+		// breakpoints: {
+		// 	640: {
+			
+		// 	},
+		// 	768: {
+		// 		slidesPerView: 3,
+		// 		spaceBetween: 10,
+		// 	},
+		// 	1024: {
+		// 		slidesPerView: 'auto',
+		// 		spaceBetween: 20,
+		// 	},
+		// }
 	});
 
 //////////////////////start scrollMagic//////////////////////

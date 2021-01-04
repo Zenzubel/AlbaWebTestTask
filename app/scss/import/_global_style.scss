@@ -66,6 +66,9 @@
 	font-size: 64px;
 	line-height: 115%;
 	color: #121925;
+	@media (max-width: 1490px) {
+		font-size: calc(22px + (64 - 22) * ((100vw - 320px) / (1490 - 320)));
+	};
 }
 
 #map {
