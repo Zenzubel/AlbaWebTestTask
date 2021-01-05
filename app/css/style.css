@@ -1791,11 +1791,34 @@ body.lock {
 
 .contacts__phone-link {
   display: block;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.contacts__phone-link:hover {
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  color: #E8232E;
 }
 
 .contacts__phone,
 .contacts__email {
   margin-top: 44px;
+}
+
+.contacts__email-link {
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.contacts__email-link:hover {
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  color: #E8232E;
 }
 
 .contacts__address-loc,

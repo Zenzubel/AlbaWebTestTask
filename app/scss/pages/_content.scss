@@ -786,6 +786,11 @@
 	// .contacts__phone-link
 	&__phone-link {
 		display: block;
+		transition-duration: 0.3s;
+		&:hover {
+			transition-duration: 0.3s;
+			color: #E8232E;
+		}
 	}
 	// .contacts__email
 	&__email {
@@ -799,6 +804,11 @@
 	}
 	// .contacts__email-link
 	&__email-link {
+		transition-duration: 0.3s;
+		&:hover {
+			transition-duration: 0.3s;
+			color: #E8232E;
+		}
 	}
 	&__address-loc, 
 	&__phone-link, 
