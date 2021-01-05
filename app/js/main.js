@@ -1,6 +1,6 @@
 'use strict';
 document.addEventListener('DOMContentLoaded', () => {
-//================== menu-burger===========================
+//==================start menu-burger===========================
 	const burgerIcon = document.querySelector('.menu-burger__icon');
 	const burgerMenu = document.querySelector('.menu-drop');
 	const burgerMenuLink = document.querySelectorAll('.menu-drop__link');
@@ -33,35 +33,32 @@ document.addEventListener('DOMContentLoaded', () => {
 			body.classList.remove('lock');
 		}
 	});
-//==========================================================
-//=================smooth scroll=============================
-document.querySelectorAll('a[href^="#"').forEach(link => {
+//================end menu-burger=========================
+//=================start smooth scroll=============================
+	document.querySelectorAll('a[href^="#"').forEach(link => {
+		link.addEventListener('click', function(e) {
+			e.preventDefault();
+			let href = this.getAttribute('href').substring(1);
+			const scrollTarget = document.getElementById(href);
+			const topOffset = 0;
+			// const topOffset = document.querySelector('.scrollto').offsetHeight;
+			// const topOffset = 0; // если не нужен отступ сверху 
+			const elementPosition = scrollTarget.getBoundingClientRect().top;
+			const offsetPosition = elementPosition - topOffset;
 
-	link.addEventListener('click', function(e) {
-		e.preventDefault();
-
-		let href = this.getAttribute('href').substring(1);
-
-		const scrollTarget = document.getElementById(href);
-
-		const topOffset = 0;
-		// const topOffset = document.querySelector('.scrollto').offsetHeight;
-		// const topOffset = 0; // если не нужен отступ сверху 
-		const elementPosition = scrollTarget.getBoundingClientRect().top;
-		const offsetPosition = elementPosition - topOffset;
-
-		window.scrollBy({
-			top: offsetPosition,
-			behavior: 'smooth'
+			window.scrollBy({
+				top: offsetPosition,
+				behavior: 'smooth'
+			});
 		});
 	});
-});
-
-		var mySwiper = new Swiper ('.more__container', {
+//=================end smooth scroll=============================
+//=================start slider swiper=============================
+	var mySwiper = new Swiper ('.more__container', {
 		containerModifierClass: 'more__container', 
 		wrapperClass: 'more__wrapper',
 		slideClass: 'more__item',
-		loop: false,
+		loop: true,
 		slidesPerView: 1,
 		spaceBetween: 20,
 		freeMode: false,
@@ -76,37 +73,115 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
 				slidesPerView: 'auto',
 				centeredSlides: false,
 				simulateTouch: false,
-			},
-			// 991: {
-			// 	loop: true,
-			// 	spaceBetween: 20,
-			// 	slidesPerView: 'auto',
-			// 	freeMode: false,
-			// },
+			}
 		}
 	});
-
-//////////////////////start scrollMagic//////////////////////
-		// initScrollMagic
+//=================end slider swiper=============================
+//=================start Magic Scroll============================
+	// initScrollMagic
 	var controller = new ScrollMagic.Controller();
-	// start scene
+//==========start scene header============
 	new ScrollMagic.Scene({
 		triggerElement: "",
 		duration: '0',
 		triggerHook: 0.1,
 		offset: 40,
-		reverse: true})
+		reverse: false})
 	.setClassToggle(".header__inner", "active") // add class toggle
-	.addIndicators({
-		name: 'anim scene',
-		colorTrigger: 'black',
-		colorStart: 'red',
-		colorEnd: 'green'
-	}) // add indicators (requires plugin)
+	.addTo(controller);
+//==========end scene header============
+//==========end scene advantages============
+	// start scene 
+	new ScrollMagic.Scene({
+		triggerElement: ".advantages",
+		duration: '0',
+		triggerHook: 0.3,
+		offset: 0,
+		reverse: false})
+	.setClassToggle(".advantages__card--1", "active") // add class toggle
+	// 	.addIndicators({
+	// 	name: 'advantages',
+	// 	colorTrigger: 'black',
+	// 	colorStart: 'red',
+	// 	colorEnd: 'green'
+	// }) // add indicators (requires plugin)
 	.addTo(controller);
 	//end scene
-//////////////////////end scrollMagic//////////////////////
+	// start scene
+	new ScrollMagic.Scene({
+		triggerElement: ".advantages",
+		duration: '0',
+		triggerHook: 0.3,
+		offset: 0,
+		reverse: false})
+	.setClassToggle(".advantages__card--2", "active") // add class toggle
+	.addTo(controller);
+	//end scene
+	// start scene
+	new ScrollMagic.Scene({
+		triggerElement: ".advantages",
+		duration: '0',
+		triggerHook: 0.3,
+		offset: 0,
+		reverse: false})
+	.setClassToggle(".advantages__card--3", "active") // add class toggle
+	.addTo(controller);
+	//end scene
+//==========end scene advantages============
+//==========start scene facts============
+	// start scene
+	new ScrollMagic.Scene({
+		triggerElement: ".facts",
+		duration: '0',
+		triggerHook: 0.5,
+		offset: 0,
+		reverse: false})
+	.setClassToggle(".facts__discription--outside", "active") // add class toggle
+	.addTo(controller);
+	//end scene
+	// start scene
+	new ScrollMagic.Scene({
+		triggerElement: ".facts",
+		duration: '0',
+		triggerHook: 0.5,
+		offset: 0,
+		reverse: false})
+	.setClassToggle(".facts__image--outside", "active") // add class toggle
+	.addTo(controller);
+	//end scene facts
+	// start scene
+	new ScrollMagic.Scene({
+		triggerElement: ".facts__discription--inside",
+		duration: '0',
+		triggerHook: 0.7,
+		offset: 0,
+		reverse: false})
+	.setClassToggle(".facts__image--inside", "active") // add class toggle
+	.addTo(controller);
+	//end scene facts
+	// start scene
+	new ScrollMagic.Scene({
+		triggerElement: ".facts__discription--inside",
+		duration: '0',
+		triggerHook: 0.7,
+		offset: 0,
+		reverse: false})
+	.setClassToggle(".facts__discription--inside", "active") // add class toggle
+	.addTo(controller);
+	//end scene
+//==========end scene facts============
+//==========start scene parametrs============
+	// start scene
+	new ScrollMagic.Scene({
+		triggerElement: ".parametrs__title",
+		duration: '0',
+		triggerHook: 0.6,
+		offset: 0,
+		reverse: false})
+	.setClassToggle(".parametrs__body", "active") // add class toggle
+	.addTo(controller);
+	//end scene
+//==========end scene parametrs============
 
-
-
+//================= end Magic Scroll============================
 });
