@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		if (target && target.classList.contains('menu-drop__link')){
 			burgerIcon.classList.remove('active');
 			burgerMenu.classList.remove('active');
+			wrapper.classList.remove('displacement');
+			headerInner.classList.remove('displacement');
 			body.classList.remove('lock');
 		}
 	});
@@ -59,33 +61,29 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
 		containerModifierClass: 'more__container', 
 		wrapperClass: 'more__wrapper',
 		slideClass: 'more__item',
-		loop: true,
-		freeMode: false,
-		slidesPerView: 'auto',
+		loop: false,
+		slidesPerView: 1,
 		spaceBetween: 20,
-		simulateTouch: false,
-		centeredSlides: false,
-		autoplay: {
-			delay: 5000,
-			disableOnInteraction: false,
-		},
+		freeMode: false,
+		centeredSlides: true,
 		scrollbar: {
 			el: '.more__scroll',
 			draggable: true
 		},
-		// breakpoints: {
-		// 	640: {
-			
-		// 	},
-		// 	768: {
-		// 		slidesPerView: 3,
-		// 		spaceBetween: 10,
-		// 	},
-		// 	1024: {
-		// 		slidesPerView: 'auto',
-		// 		spaceBetween: 20,
-		// 	},
-		// }
+		breakpoints: {
+			330: {
+				loop: true,
+				slidesPerView: 'auto',
+				centeredSlides: false,
+				simulateTouch: false,
+			},
+			// 991: {
+			// 	loop: true,
+			// 	spaceBetween: 20,
+			// 	slidesPerView: 'auto',
+			// 	freeMode: false,
+			// },
+		}
 	});
 
 //////////////////////start scrollMagic//////////////////////
@@ -109,25 +107,6 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
 	//end scene
 //////////////////////end scrollMagic//////////////////////
 
-			// function initMap(): void {
-			//   // The location of Uluru
-			//   const uluru = { lat: -25.344, lng: 131.036 };
-			//   // The map, centered at Uluru
-			//   const map = new google.maps.Map(
-			//     document.getElementById("map") as HTMLElement,
-			//     {
-			//       zoom: 4,
-			//       center: uluru,
-			//     }
-			//   );
-
-			//   // The marker, positioned at Uluru
-			//   const marker = new google.maps.Marker({
-			//     position: uluru,
-			//     map: map,
-			//   });
-			// }
-		
 
 
 });
