@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		duration: '0',
 		triggerHook: 0.1,
 		offset: 40,
-		reverse: false})
+		reverse: true})
 	.setClassToggle(".header__inner", "active") // add class toggle
 	.addTo(controller);
 //==========end scene header============

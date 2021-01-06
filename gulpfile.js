@@ -44,7 +44,7 @@ gulp.task('script', function () {
 });
 // ===========css библиотеки плагинов==================
 gulp.task('css', async function(){
-	return gulp.src('app/js/script/swiper/swiper.css')
+	return gulp.src('app/js/script/empty.css')
 	.pipe(concat('_libs.scss'))
 	.pipe (gulp.dest('app/scss/import/'))
 	.pipe (browserSync.reload({stream: true}))
@@ -99,6 +99,6 @@ gulp.task('browser-sync', function() {
 	});
 });
 //===========порядок выполнения хода запуска проекта===========
-gulp.task ('default', gulp.parallel('css', 'scss' ,'js', 'browser-sync', 'watch'));
+gulp.task ('default', gulp.parallel('scss', 'css' ,'js', 'browser-sync', 'watch'));
 // gulp.task ('default', gulp.parallel('css', 'scss' ,'js', 'codekit', 'browser-sync', 'watch'));
 ///////////////////////////////////////////////////////

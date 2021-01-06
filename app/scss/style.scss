@@ -1,14 +1,13 @@
-//библиотеки
-@import "import/_libs.scss";
-// @import "import/_custom-animate.scss";
 //<==ОБНУЛЕНИЕ======
 @import "import/_null.scss";
+//библиотеки
+@import "import/_libs.scss";
 //<Подключаем шрифты>=======================================================================================
 @import "import/_fonts.scss";
 @import "import/_global_style.scss";
 //===========================================================================
 body {
-	font-family: 'Quicksand', sans-serif;
+	// font-family: 'Quicksand', sans-serif;
 	color: #000;
 	&.lock {
 		overflow-x: hidden;
